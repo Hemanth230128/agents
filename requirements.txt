@@ -1,0 +1,16 @@
+# Editable install of the repo (keeps local imports like "livekit.*" resolvable
+# once you add a pyproject.toml or setup.py). Remove this line if you prefer not to install the package.
+-e .
+
+# Pytest and async support (keep pytest <9 to avoid the async-fixture removal error)
+pytest<9
+pytest-asyncio>=0.20
+pytest-anyio>=1.6
+pytest-cov>=4.0
+pytest-mock>=3.10
+anyio>=3.7
+
+# Common runtime/test deps used by the tests
+python-dotenv>=1.0
+requests>=2.28
+httpx>=0.26
